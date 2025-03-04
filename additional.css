@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #c1d5f6;
+    background-color: #fffbfb;
 }
 
 /* Navigation Bar */
@@ -20,7 +20,7 @@ html {
     left: 0;
     width: 100%;
     height: 55px;
-    background-color: #849cc3; /* Semi-transparent background */
+    background-color: #c1d5f6; /* Semi-transparent background */
     padding: 15px 20px;
     z-index: 1000;
 }
@@ -35,7 +35,7 @@ html {
 }
 .nav-list a {
     text-decoration: none;
-    color: #fdf7c9;
+    color: #5c687f;
     font-size: 1.6rem;
     font-weight: bold;
     padding: 8px 16px;
@@ -58,11 +58,10 @@ html {
     align-items: center;
 }
 
-
 header {
     width: 100%;
-    height: 170px;
-    background-color: #c1d5f6;
+    height: 150px;
+    background-color: #fffbfb;
     display: flex;
     margin-top: 3%;
     justify-content: center;
@@ -115,7 +114,7 @@ header:hover {
 
 .slide img {
     width: 100%;
-    height: 500px;
+    height: 1500px;
     object-fit: cover;
 }
 
@@ -140,3 +139,12 @@ header:hover {
 #next {
     right: 10px;
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffeef0; /* Dark brown color */
+    color: rgb(48, 46, 58);
+    font-size: 16px;
+  }
+  
