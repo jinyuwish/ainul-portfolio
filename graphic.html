@@ -1,150 +1,56 @@
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Showcase</title>
+    <link rel="stylesheet" href="graphic.css">
+</head>
+<body>
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fffbfb;
-}
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html#about-me">About Me</a></li>
+            <li><a href="index.html#my-skills">Skills</a></li>
+            <!-- Logo Image in the Middle -->
+<li class="nav-logo">
+    <a href="index.html">
+        <img src="logo.png" alt="Logo">
+    </a>
+</li>
+            <li><a href="index.html#my-portfolio">Portfolio</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-/* Navigation Bar */
-html {
-    scroll-behavior: smooth;
-}
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 55px;
-    background-color: #c1d5f6; /* Semi-transparent background */
-    padding: 15px 20px;
-    z-index: 1000;
-}
-.nav-list {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    list-style: none;
-}
-.nav-list li {
-    display: inline;
-}
-.nav-list a {
-    text-decoration: none;
-    color: #5c687f;
-    font-size: 1.6rem;
-    font-weight: bold;
-    padding: 8px 16px;
-    font-family: 'Cheese Market' ;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.nav-list a:hover {
-    color: #f485e7; /* Highlight color on hover */
-}
+    <!-- Header -->
+    <header>
+        <img src="graphic-portfolio.svg" alt="Graphic Design Portfolio">
+    </header>
 
-.nav-logo img {
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
-    transform: translateY(-15px); /* Move the logo up */
-    vertical-align: middle;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-}
-
-header {
-    width: 100%;
-    height: 150px;
-    background-color: #fffbfb;
-    display: flex;
-    margin-top: 3%;
-    justify-content: center;
-    align-items: center;
-    color: #fff2fc;
-    font-size: 1.5rem;
-    font-family: 'Cheese Market';
-    position: relative;
-    overflow: hidden;
-}
-
-/* Pastel Blue Gradient Hover Effect */
-header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(45deg, #b0dce9, #d1e7f8, #cde8f3);
-    z-index: -1;
-    transition: transform 0.5s ease-in-out;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-header:hover::before {
-    transform: scaleX(1);
-}
-
-header:hover {
-    color: #03435c; /* Slight pastel blue-gray text color change */
-}
-
-/* Image Slider */
-.slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 30px auto;
-    overflow: hidden;
-}
-
-.slider {
-    display: flex;
-    transition: transform 1s ease;
-}
-
-.slide {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.slide img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-/* Slider Buttons */
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #849cc3;
-    color: white;
-    font-size: 24px;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#prev {
-    left: 10px;
-}
-
-#next {
-    right: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #ffeef0; /* Dark brown color */
-    color: rgb(48, 46, 58);
-    font-size: 16px;
-  }
-  
+    <!-- Image Slider -->
+    <section class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="graphic1.svg" alt="Project 1">
+            </div>
+            <div class="slide">
+                <img src="graphic2.svg" alt="Project 2">
+            </div>
+            <div class="slide">
+                <img src="graphic3.svg" alt="Project 3">
+            </div>
+            <div class="slide">
+                <img src="graphic4.svg" alt="Project 4">
+            </div>
+        </div>
+        <button id="prev" class="slider-btn">&#10094;</button>
+        <button id="next" class="slider-btn">&#10095;</button>
+    </section>
+    <script src="app.js"></script>
+    <footer>
+        <p>© 2025 Nur Ainul Umairah. All rights reserved.</p>
+      </footer>   
+</body>
+</html>
