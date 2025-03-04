@@ -39,7 +39,7 @@ html {
 }
 .nav-list a {
     text-decoration: none;
-    color: #fdf7c9;
+    color: #5c687f;
     font-size: 1.6rem;
     font-weight: bold;
     padding: 8px 16px;
@@ -130,30 +130,6 @@ html {
     transition: transform 0.3s ease;
 }
 
-/* Polaroids Section */
-.polaroids {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-.polaroid {
-    width: 150px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.polaroid img {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    max-height: 180px;
-}
-.polaroid:hover {
-    transform: translateY(-10px) scale(1.05);
-}
-  
   /* About Me Section */
   .about-me {
     background: url('../about-me.svg') no-repeat center center/cover;
@@ -174,23 +150,38 @@ html {
 
 /* Skills Section */
 .skills-section {
-    background-color: #f6e7f1; /* Light pink background */
-    padding: 50px 20px;
+    background-color: #fffbfb; /* Light pink background */
+    padding: 40px 30px;
     text-align: center;
 }
 
-.skills-section h2 {
-    font-size: 2rem;
-    color: #83aada; /* Soft blue color */
-    margin-bottom: 30px;
-    font-family: 'Cheese Market' ;
+.skills-banner {
+    display: block; /* Makes sure it's not inline */
+    margin-top: 40px; /* Add space between the banner and the skills */
+    width: 1920px; /* Adjust size to your liking */
+    max-width: 100%; 
+    object-fit: contain; /* Keep proportions */
+    animation: float 3s infinite ease-in-out; /* Optional floating animation for that ✨Sanrio✨ vibes */
 }
 
 .skills-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 50px; /* Space between items */
+    justify-items: center; /* Center each item horizontally */
+    padding: 50px 0;
+}
+
+.skill-item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between image & text */
+    transition: transform 0.3s ease-in-out; /* Hover effect */
+}
+
+.skill-item:hover {
+    transform: translateY(-10px) rotate(-3deg); /* Cute floating effect on hover */
 }
 
 .skill {
@@ -210,7 +201,7 @@ html {
     height: 100px;
     background: #f6f6f6; /* Soft white-gray circle */
     border-radius: 50%;
-    border: 3px solid #83aada; /* Blue border */
+    border: 5px solid #83aada; /* Blue border */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,7 +215,7 @@ html {
 }
 
 .skill-circle img {
-    width: 60%; /* Adjust logo size */
+    width: 90%; /* Adjust logo size */
     height: auto;
 }
 
@@ -241,7 +232,7 @@ html {
 }
 
 .skill p {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 1rem;
     color: #333; /* Neutral text color */
     font-weight: bold;
@@ -252,34 +243,31 @@ html {
     background-color: #83aada; /* Change color to soft blue */
     transition: background-color 0.3s ease;
 }
-/* Projects Section */
-.projects-section {
-    background-color: #f6e7f1;
-    padding: 80px 30px;
+/* Porfolio Section */
+.portfolio-section {
+    background-color: #fffbfb;
+    padding: 100px 0px;
     text-align: center;
 }
-.projects-section h2 {
-    font-size: 2rem;
-    color: #83aada; /* Soft blue color */
-    margin-bottom: 30px;
-    font-family: 'Cheese Market' ;
-}
-.projects-title {
-    font-size: 2.5rem;
-    color: #83aada;
-    margin-bottom: 40px;
-    font-family: 'Cheese Market';
+.portfolio-banner {
+    display: block; /* Makes sure it's not inline */
+    margin-top: 2px; /* Add space between the banner and the portfolio */
+    margin-bottom: 50px; /* Add space between the banner and the portfolio */
+    width: 1920px; /* Adjust size to your liking */
+    max-width: 100%; 
+    object-fit: contain; /* Keep proportions */
+    animation: float 3s infinite ease-in-out; /* Optional floating animation for that ✨Sanrio✨ vibes */
 }
 
-.projects-container {
+.portfolio-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
 }
 
-/* Project Card Styling */
-.project-card {
+/* Portfolio Card Styling */
+.portfolio-card {
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -293,12 +281,12 @@ html {
     display: block;
 }
 
-.project-card:hover {
+.portfolio-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
-.project-image {
+.portfolio-image {
     width: 100%;
     height: auto;
     max-height: 200px;
@@ -306,78 +294,114 @@ html {
     object-fit: cover;
 }
 
-.project-card h3 {
+.portfolio-card h3 {
     margin: 20px 0 10px;
     font-size: 1.6rem;
-    color: #f485e7;
-    font-family: 'Cheese Market';
-}
-
-.project-card p {
-    font-size: 1rem;
     color: #333;
+    font-family: 'arial', sans-serif;
     font-weight: bold;
 }
 
-/* Footer Section */
-.footer-section {
-    background-color: #f485e7;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
+.portfolio-card p {
+    font-size: 1rem;
+    color: #5e6a81;
+    font-weight: bold;
 }
 
-.footer-container {
+.contact-section {
+    background: linear-gradient(135deg, #fddaff, #c1d5f6, #fffbfb);
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 0 40px rgba(244, 133, 231, 0.6);
+    animation: floating 3s infinite alternate ease-in-out;
+}
+
+.contact-section h2 {
+    font-size: 3rem;
+    font-family: 'Cheese Market';
+    color: #5c687f;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-section h2::after {
+    content: '💌';
+    position: absolute;
+    right: -30px;
+    top: 0;
+    animation: floatemoji 2s infinite alternate ease-in-out;
+}
+
+.contact-section p {
+    font-size: 1.3rem;
+    color: #03435c;
+    margin-bottom: 40px;
+}
+
+.contact-icons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 30px;
 }
 
-/* Personal Image Styling */
-.footer-profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border: 3px solid white;
-}
-
-.footer-contacts {
-    max-width: 300px;
-}
-
-.footer-contacts h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-family: 'Cheese Market';
-}
-
-.social-links {
-    list-style: none;
-    padding: 0;
-}
-
-.social-links li {
-    margin: 10px 0;
-}
-
-.social-links a {
+.contact-icons a {
     text-decoration: none;
+    padding: 12px 30px;
+    border: 2px solid #f485e7;
+    border-radius: 30px;
+    color: #5c687f;
+    font-family: 'Cheese Market';
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(244, 133, 231, 0.4);
+}
+
+.contact-icons a:hover {
+    background: #f485e7;
     color: white;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.3s ease;
+    transform: scale(1.1) rotate(-3deg);
+    box-shadow: 0 0 40px rgba(244, 133, 231, 0.9);
 }
 
-.social-links a:hover {
-    transform: translateX(5px);
+.contact-img img {
+    width: 250px;
+    margin-top: 50px;
+    animation: floating 3s infinite alternate ease-in-out;
+    opacity: 0.8;
+    transition: all 0.5s ease;
 }
 
-.social-links img {
-    width: 45px;
-    height: auto;
+.contact-img img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
+
+@keyframes floating {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes floatemoji {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffeef0; /* Dark brown color */
+    color: rgb(48, 46, 58);
+    font-size: 16px;
+  }
+  
